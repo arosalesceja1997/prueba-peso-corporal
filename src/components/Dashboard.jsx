@@ -18,11 +18,11 @@ const Item = styled(Paper)(({ theme }) => ({
 }));
 
 export default function BasicGrid() {
+  let names = ['Altura(cm):', 'Peso(kg):', 'Cintura(cm):', 'Cuello(cm):'];
   return (
     <React.Fragment>
       <CssBaseline />
       <Container fixed sx={{marginTop: 3}}>
-        {/* <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} /> */}
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={6}>
@@ -37,10 +37,11 @@ export default function BasicGrid() {
 
                 <br/>
                 <RowRadioButtonsGroup></RowRadioButtonsGroup>
-                <MyInput name='Altura(cm):'></MyInput>
-                <MyInput name='Peso(kg):'></MyInput>
-                <MyInput name='Cintura(cm):'></MyInput>
-                <MyInput name='Cuello(cm):'></MyInput>
+                {
+                  names.map((name) => {
+                    return <MyInput name={name}></MyInput>
+                  })
+                }
                 <ButtonGroup/>
               </Item>
             </Grid>
