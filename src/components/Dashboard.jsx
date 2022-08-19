@@ -22,11 +22,11 @@ export default function BasicGrid() {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container fixed sx={{marginTop: 3}}>
+      <Container fixed sx={{ marginTop: 3 }}>
         <Box sx={{ flexGrow: 1 }}>
           <Grid container spacing={2}>
             <Grid item xs={6}>
-              <Item sx={{ color: '#fff', textAlign: 'left'}}>
+              <Item sx={{ color: '#fff', textAlign: 'left' }}>
                 <h1>Calculadora de grasa corporal</h1>
                 <p>
                   El metodo de la marina de estados Unidos (US navid method) ofrece una manera
@@ -35,18 +35,18 @@ export default function BasicGrid() {
                 </p>
                 <p>Los valores requeridos por la formula son los siguientes:</p>
 
-                <br/>
+                <br />
                 <RowRadioButtonsGroup></RowRadioButtonsGroup>
                 {
                   names.map((name) => {
                     return <MyInput name={name}></MyInput>
                   })
                 }
-                <ButtonGroup/>
+                <ButtonGroup />
               </Item>
             </Grid>
             <Grid item xs={6}>
-              <Item sx={{ color: '#fff', height: '100%'}}>
+              <Item sx={{ color: '#fff', height: '100%' }}>
                 <GradientGroup></GradientGroup>
               </Item>
             </Grid>
